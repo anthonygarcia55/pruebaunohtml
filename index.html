@@ -6,14 +6,15 @@
     <title>Bienvenido a mi web</title>
     <style>
         body {
-            font-family: 'Poppins', sans-serif; /* Fuente moderna */
-            background-color: #f4f4f4; 
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            overflow: hidden; /* Oculta la barra de desplazamiento */
+            overflow: hidden;
+            transition: background-color 1s ease; /* Transición suave para el fondo */
         }
 
         .container {
@@ -22,7 +23,7 @@
             border-radius: 16px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             text-align: center;
-            position: relative; /* Para el efecto de brillo */
+            position: relative;
         }
 
         h1 {
@@ -39,7 +40,6 @@
             margin-bottom: 30px;
         }
 
-        /* Efecto de brillo */
         .container::before {
             content: '';
             position: absolute;
@@ -52,9 +52,8 @@
             border-radius: 16px;
         }
 
-        /* Botón */
         .btn {
-            background-color: #4CAF50; /* Verde */
+            background-color: #4CAF50;
             color: white;
             padding: 15px 30px;
             text-align: center;
@@ -62,12 +61,26 @@
             display: inline-block;
             font-size: 1.2em;
             border-radius: 8px;
-            transition: background-color 0.3s; /* Transición suave */
+            transition: background-color 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .btn:hover {
-            background-color: #45a049; /* Verde más oscuro al pasar el ratón */
+            background-color: #45a049;
+        }
+
+        /* Estilos para los degradados */
+        .gradient-1 {
+            background: linear-gradient(to right, #ff5f6d, #ffc371); /* Rojo a Naranja */
+        }
+        .gradient-2 {
+            background: linear-gradient(to bottom, #456990, #e7eff8); /* Azul a Celeste */
+        }
+        .gradient-3 {
+            background: linear-gradient(to top, #00b09b, #96c93d); /* Verde a Azul claro */
+        }
+        .gradient-4 {
+            background: linear-gradient(to left, #f45b69, #90556d); /* Rosado a Morado */
         }
     </style>
 </head>
@@ -75,7 +88,23 @@
     <div class="container">
         <h1>Bienvenido a mi web</h1>
         <p>¡Hola! Estoy encantado de que estés aquí. Explora mi contenido y disfruta de la experiencia.</p>
-        <a href="#" class="btn">Explorar</a>
+        <button class="btn" onclick="changeBackground()">Explorar</button>
     </div>
+
+    <script>
+        let backgroundIndex = 0;
+        const gradients = [
+            'gradient-1',
+            'gradient-2',
+            'gradient-3',
+            'gradient-4'
+        ];
+
+        function changeBackground() {
+            backgroundIndex = (backgroundIndex + 1) % gradients.length;
+            document.body.classList.remove(...gradients); // Elimina las clases anteriores
+            document.body.classList.add(gradients[backgroundIndex]); // Añade la nueva clase
+        }
+    </script>
 </body>
 </html>
