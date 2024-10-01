@@ -1,0 +1,88 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column; /* Alineación vertical del contenido */
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    transition: background-color 1s ease;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.intro {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.intro p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed; /* Fija el footer al final */
+    bottom: 0;
+    left: 0;
+}
+
+/* Estilos para los degradados */
+.gradient-1 {
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
+}
+.gradient-2 {
+    background: linear-gradient(to bottom, #456990, #e7eff8);
+}
+.gradient-3 {
+    background: linear-gradient(to top, #00b09b, #96c93d);
+}
+.gradient-4 {
+    background: linear-gradient(to left, #f45b69, #90556d);
+}
