@@ -1,14 +1,12 @@
-/* Estilos generales */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
     display: flex;
-    flex-direction: column; /* Alineación vertical del contenido */
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     overflow: hidden;
-    transition: background-color 1s ease;
 }
 
 header {
@@ -21,45 +19,58 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 2em;
 }
 
 main {
     padding: 20px;
     width: 80%;
-    max-width: 800px;
+    max-width: 500px;
+    margin-top: 20px;
 }
 
-.intro {
+.list-container {
     background-color: white;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#shopping-list {
+    list-style: none;
+    padding: 0;
+}
+
+#shopping-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.add-item, .download {
+    margin-top: 20px;
     text-align: center;
 }
 
-.intro p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.btn {
+button {
     background-color: #0023e9;
     color: white;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.2em;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
 }
 
-.btn:hover {
-    background-color: #45a049;
+button:hover {
+    background-color: #001a9d;
 }
 
 footer {
@@ -68,21 +79,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    position: fixed; /* Fija el footer al final */
+    position: fixed;
     bottom: 0;
     left: 0;
-}
-
-/* Estilos para los degradados */
-.gradient-1 {
-    background: linear-gradient(to right, #ff5f6d, #ffc371);
-}
-.gradient-2 {
-    background: linear-gradient(to bottom, #456990, #e7eff8);
-}
-.gradient-3 {
-    background: linear-gradient(to top, #00b09b, #96c93d);
-}
-.gradient-4 {
-    background: linear-gradient(to left, #f45b69, #90556d);
 }

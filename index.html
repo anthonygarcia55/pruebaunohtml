@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a mi web</title>
+    <title>Lista de Compras</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenido a mi web</h1>
+        <h1>Lista de Compras</h1>
     </header>
 
     <main>
-        <section class="intro">
-            <p>¡Hola! Josue mira esta web que monte para precticar git y github.</p>
-            <button class="btn" onclick="changeBackground()">Dale Clic Para ver efectos en el fondo</button>
+        <section class="list-container">
+            <ul id="shopping-list">
+                </ul>
+        </section>
+
+        <section class="add-item">
+            <input type="text" id="item-input" placeholder="Agregar artículo...">
+            <button id="add-item-button">Agregar</button>
+        </section>
+
+        <section class="download">
+            <button id="download-button">Descargar Lista (JPG)</button>
         </section>
     </main>
 

@@ -1,13 +1,23 @@
-let backgroundIndex = 0;
-const gradients = [
-    'gradient-1',
-    'gradient-2',
-    'gradient-3',
-    'gradient-4'
-];
+const shoppingList = document.getElementById('shopping-list');
+const itemInput = document.getElementById('item-input');
+const addItemButton = document.getElementById('add-item-button');
+const downloadButton = document.getElementById('download-button');
 
-function changeBackground() {
-    backgroundIndex = (backgroundIndex + 1) % gradients.length;
-    document.body.classList.remove(...gradients);
-    document.body.classList.add(gradients[backgroundIndex]);
-}
+addItemButton.addEventListener('click', () => {
+    const newItem = itemInput.value.trim();
+    if (newItem !== "") {
+        const listItem = document.createElement('li');
+        listItem.textContent = newItem;
+        shoppingList.appendChild(listItem);
+        itemInput.value = "";
+    }
+});
+
+downloadButton.addEventListener('click', () => {
+    html2canvas(shoppingList).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'lista-de-compras.jpg';
+        link.href = canvas.toDataURL('image/jpeg');
+        link.click();
+    });
+});
